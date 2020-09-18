@@ -1,0 +1,73 @@
+using System;
+
+namespace Deliverable2
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+		    int numberofflips = 9;
+            int correctcount = 0;
+            int tails = 0;
+            int heads = 0;
+            string headsortailsguess;
+            double percentwins;
+            
+            Console.WriteLine("Guess which will have more: heads or tails?");
+            headsortailsguess = Console.ReadLine(); 
+            
+            Console.WriteLine("How many time shall we flip the coin?");
+            numberofflips = Convert.ToInt32(Console.ReadLine());
+            
+            percentwins = (correctcount/numberofflips) * 100
+            
+{
+    Random rnd = new Random();
+    int result = rnd.Next(0,2);
+    if(result == 1)
+    {
+        Console.WriteLine("Tails");
+        
+    }
+    else if(result == 0)
+    {
+        Console.WriteLine("Heads");
+        
+        while (correctcount < 10)
+        
+    }
+}
+            Coin myCoin = new Coin();
+    
+            int headsCount = 0;
+            for(int i = 0; i < numberofflips; i++) 
+            {
+                // Toss the coin
+                myCoin.toss();
+                if(myCoin.getSideUp() == 0) 
+                {
+                    headsCount++;
+                }
+            }
+            
+            Console.WriteLine("Your Guess:" + headsortailsguess);
+            Console.WriteLine("Correct Count:" + correctcount);
+            Console. WriteLine ("That's" + percentwins + "%")
+		}
+	}
+}
+class Coin 
+{
+    int sideUp;
+    Random rnd = new Random();
+    
+    public void toss() 
+    {
+        // Get a random value, 0 or 1.
+        this.sideUp = rnd.Next(2);
+    }
+    public int getSideUp() 
+    {
+        return sideUp;
+    }
+}
